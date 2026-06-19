@@ -1095,10 +1095,12 @@ border:1px solid #ddd;
 }
 
 
-body.light .skill-area span:hover{
+body.light .skill-area span{
+  color:#111 !important;
+}
 
-background:linear-gradient(90deg,#00e5ff,#8a2be2);
-
-color:white;
+body.light .skilll-area span:hover{
+  color:white !important;
+}
 
 }
