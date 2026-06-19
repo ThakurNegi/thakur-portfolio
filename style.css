@@ -3025,3 +3025,20 @@ font-weight:600;
 
 
 }
+
+@media(max-width:768px){
+
+.ai-box{
+width:85% !important;
+height:350px !important;
+left:7.5% !important;
+bottom:70px !important;
+}
+
+
+.chat-body{
+height:210px !important;
+}
+
+
+}
