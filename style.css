@@ -3042,3 +3042,48 @@ height:210px !important;
 
 
 }
+
+@media(max-width:768px){
+
+.hero{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+
+.hero-right img{
+
+width:160px !important;
+height:160px !important;
+object-fit:cover;
+border-radius:50%;
+
+}
+
+
+.hero-buttons{
+
+display:none !important;
+
+}
+
+
+.ai-box{
+
+width:85% !important;
+height:350px !important;
+left:7.5% !important;
+bottom:70px !important;
+
+}
+
+
+.links{
+
+display:none;
+
+}
+
+}
