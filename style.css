@@ -2879,6 +2879,66 @@ text-align:center;
 
 font-size:15px;
 
+  @media(max-width:768px){
+
+
+.ai-box{
+
+width:85% !important;
+
+height:380px !important;
+
+left:7.5% !important;
+
+right:auto !important;
+
+bottom:80px !important;
+
+}
+
+
+
+.chat-body{
+
+height:250px !important;
+
+overflow-y:auto;
+
+}
+
+
+
+.chat-head{
+
+font-size:16px;
+
+padding:12px;
+
+}
+
+
+
+.chat-input input{
+
+font-size:14px;
+
+}
+
+
+
+.ai-btn{
+
+width:55px;
+
+height:55px;
+
+font-size:18px;
+
+}
+
+
+}
+
 }
 
 
