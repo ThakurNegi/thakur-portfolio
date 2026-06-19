@@ -1735,3 +1735,615 @@ opacity:1;
 }
 
 }
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+
+nav{
+
+padding:15px;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+
+.links{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+padding:40px 20px;
+
+}
+
+
+
+.hero-left h1{
+
+font-size:42px;
+
+}
+
+
+
+.hero-left p{
+
+font-size:16px;
+
+}
+
+
+
+.hero-right img{
+
+width:260px;
+
+height:260px;
+
+}
+
+
+
+.hero-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.numbers{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+
+
+.numbers div{
+
+min-width:100px;
+
+}
+
+
+
+section{
+
+padding:50px 20px;
+
+}
+
+
+
+.content h2{
+
+font-size:28px;
+
+}
+
+
+
+.project-show{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.skill-area{
+
+justify-content:center;
+
+}
+
+
+
+.contact-wrap{
+
+flex-direction:column;
+
+}
+
+
+
+.contact-form input,
+.contact-form textarea{
+
+width:100%;
+
+}
+
+
+
+.ai-box{
+
+width:90%;
+
+right:5%;
+
+}
+
+
+
+.ai-btn{
+
+right:20px;
+
+bottom:20px;
+
+}
+
+
+
+}
+
+@media screen and (max-width:768px){
+
+body{
+overflow-x:hidden;
+}
+
+
+nav{
+display:flex;
+flex-direction:column;
+}
+
+
+.logo{
+font-size:24px;
+}
+
+
+.links a{
+font-size:14px;
+}
+
+
+.hero{
+display:flex;
+flex-direction:column;
+padding:30px 15px;
+}
+
+
+.hero-left h1{
+font-size:34px;
+line-height:1.2;
+}
+
+
+.hero-left .eyebrow{
+font-size:18px;
+}
+
+
+.hero-right img{
+width:220px;
+height:220px;
+}
+
+
+
+.hero-right .numbers{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+
+.hero-right .numbers div{
+width:200px;
+}
+
+
+.project-show{
+display:flex;
+flex-direction:column;
+}
+
+
+.experience,
+.project-card,
+.content{
+width:100%;
+}
+
+
+
+.ai-box{
+
+width:85% !important;
+
+right:7% !important;
+
+}
+
+
+
+}
+
+@media(max-width:768px){
+
+
+*{
+box-sizing:border-box;
+}
+
+
+body{
+overflow-x:hidden;
+}
+
+
+
+/* NAV */
+
+nav{
+padding:15px 20px;
+}
+
+
+.logo{
+font-size:22px;
+}
+
+
+.links{
+gap:10px;
+}
+
+
+.links a{
+font-size:13px;
+}
+
+
+
+/* HERO */
+
+
+.hero{
+padding:40px 20px;
+}
+
+
+.hero-left{
+width:100%;
+}
+
+
+.eyebrow{
+
+font-size:14px;
+
+}
+
+
+.hero-left h1{
+
+font-size:36px;
+
+}
+
+
+.typing{
+
+font-size:25px;
+
+}
+
+
+.hero-left p{
+
+font-size:15px;
+
+line-height:1.6;
+
+}
+
+
+
+.hero-buttons a{
+
+padding:12px 18px;
+
+font-size:14px;
+
+}
+
+
+
+/* IMAGE */
+
+
+.hero-right img{
+
+width:230px;
+
+height:230px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+}
+
+
+
+
+/* NUMBER CARDS */
+
+
+.numbers{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+
+.numbers div{
+
+width:90%;
+
+padding:15px;
+
+}
+
+
+
+
+/* SECTIONS */
+
+
+section{
+
+padding:45px 20px;
+
+}
+
+
+.title{
+
+font-size:14px;
+
+}
+
+
+.content h2,
+.contact-text h2{
+
+font-size:26px;
+
+}
+
+
+
+
+/* PROJECTS */
+
+
+.project-show{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+.project-card{
+
+padding:20px;
+
+}
+
+
+
+/* SKILLS */
+
+
+.skill-area span{
+
+font-size:14px;
+
+padding:10px 14px;
+
+}
+
+
+
+/* AI */
+
+
+.ai-btn{
+
+width:55px;
+
+height:55px;
+
+font-size:18px;
+
+}
+
+
+.ai-box{
+
+width:90%;
+
+right:5%;
+
+bottom:90px;
+
+}
+
+
+
+.chat-body{
+
+max-height:250px;
+
+}
+
+
+
+
+}
+
+@media(max-width:768px){
+
+
+.hero{
+
+padding:30px 15px;
+
+gap:25px;
+
+}
+
+
+
+.hero-right img{
+
+width:170px !important;
+
+height:170px !important;
+
+border-radius:50%;
+
+}
+
+
+
+.numbers{
+
+display:flex !important;
+
+flex-direction:row !important;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:10px;
+
+}
+
+
+
+.numbers div{
+
+width:105px !important;
+
+min-width:105px;
+
+padding:12px !important;
+
+}
+
+
+
+.numbers strong{
+
+font-size:18px;
+
+}
+
+
+
+.numbers span{
+
+font-size:12px;
+
+}
+
+
+
+/* experience cards */
+
+.experience{
+
+padding:20px;
+
+margin-bottom:20px;
+
+}
+
+
+
+/* project cards */
+
+.project-show{
+
+display:grid !important;
+
+grid-template-columns:1fr;
+
+gap:15px;
+
+}
+
+
+
+.project-card{
+
+width:100%;
+
+}
+
+
+
+/* heading */
+
+.hero-left h1{
+
+font-size:32px !important;
+
+}
+
+
+
+.typing{
+
+font-size:22px !important;
+
+}
+
+
+
+}
