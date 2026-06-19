@@ -1083,3 +1083,22 @@ height:210px;
 
 
 }
+
+body.light .skill-area span{
+
+background:white;
+
+color:#111;
+
+border:1px solid #ddd;
+
+}
+
+
+body.light .skill-area span:hover{
+
+background:linear-gradient(90deg,#00e5ff,#8a2be2);
+
+color:white;
+
+}
