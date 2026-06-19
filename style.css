@@ -2347,3 +2347,132 @@ font-size:22px !important;
 
 
 }
+
+@media (max-width:768px){
+
+.hero{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.hero-right img{
+
+width:160px !important;
+height:160px !important;
+
+object-fit:cover;
+
+margin:auto;
+
+}
+
+
+
+.numbers{
+
+display:grid !important;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:8px;
+
+width:100%;
+
+}
+
+
+
+.numbers div{
+
+width:auto !important;
+
+padding:10px !important;
+
+}
+
+
+
+.numbers strong{
+
+font-size:18px;
+
+}
+
+
+
+.numbers span{
+
+font-size:11px;
+
+}
+
+
+
+
+.hero-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+
+
+.hero-buttons a{
+
+width:200px;
+
+text-align:center;
+
+}
+
+
+
+.project-show{
+
+display:block !important;
+
+}
+
+
+
+.project-card{
+
+margin-bottom:20px;
+
+}
+
+
+
+.skill-area{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+
+
+.ai-box{
+
+width:90% !important;
+
+left:5% !important;
+
+right:auto !important;
+
+}
+
+
+
+}
