@@ -1145,3 +1145,39 @@ box-shadow:0 0 20px #00e5ff;
   color:white;
 }
 
+/* HERO BUTTONS FIX */
+
+.hero-buttons{
+display:flex;
+gap:15px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+
+.hero-buttons a{
+
+display:inline-block;
+
+padding:14px 25px;
+
+border-radius:30px;
+
+background:linear-gradient(90deg,#00e5ff,#8a2be2);
+
+color:white !important;
+
+text-decoration:none !important;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+
+.hero-buttons a:hover{
+
+transform:translateY(-5px);
+
+}
