@@ -1181,3 +1181,21 @@ transition:.3s;
 transform:translateY(-5px);
 
 }
+
+.btn{
+
+display:inline-flex !important;
+
+padding:14px 25px !important;
+
+border-radius:30px !important;
+
+background:linear-gradient(90deg,#00e5ff,#8a2be2) !important;
+
+color:white !important;
+
+text-decoration:none !important;
+
+font-weight:700;
+
+}
