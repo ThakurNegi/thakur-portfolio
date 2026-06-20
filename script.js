@@ -2,45 +2,21 @@
 
 const theme = document.getElementById("theme");
 
+
 if(theme){
 
 theme.addEventListener("click",()=>{
 
+
 document.body.classList.toggle("light");
 
 
-if(document.body.classList.contains("light")){
+theme.innerHTML = document.body.classList.contains("light")
+? "🌙"
+: "☀️";
 
-theme.innerHTML="🌙";
-
-}
-
-else{
-
-theme.innerHTML="☀️";
-
-}
 
 });
-
-}
-
-
-
-
-
-// ================= MOBILE MENU =================
-
-
-function toggleMenu(){
-
-const menu = document.querySelector(".links");
-
-if(menu){
-
-menu.classList.toggle("active");
-
-}
 
 }
 
@@ -69,10 +45,10 @@ let roleIndex = 0;
 
 
 
-function changeRole(){
+setInterval(()=>{
 
 
-if(!typing) return;
+if(typing){
 
 
 typing.innerHTML = roles[roleIndex];
@@ -87,10 +63,73 @@ roleIndex = 0;
 
 }
 
+
 }
 
 
-setInterval(changeRole,2500);
+},2500);
+
+
+
+
+
+
+
+// ================= SCROLL ANIMATION =================
+
+
+const elements = document.querySelectorAll(
+
+"section, .project-card, .experience"
+
+);
+
+
+
+const observer = new IntersectionObserver((items)=>{
+
+
+items.forEach(item=>{
+
+
+if(item.isIntersecting){
+
+
+item.target.style.opacity="1";
+
+
+item.target.style.transform="translateY(0)";
+
+
+}
+
+
+});
+
+
+});
+
+
+
+
+
+elements.forEach(el=>{
+
+
+el.style.opacity="0";
+
+
+el.style.transform="translateY(40px)";
+
+
+el.style.transition="1s ease";
+
+
+observer.observe(el);
+
+
+});
+
 
 
 
@@ -103,6 +142,7 @@ setInterval(changeRole,2500);
 
 function openAI(){
 
+
 const box = document.getElementById("aiBox");
 
 
@@ -112,6 +152,7 @@ box.classList.toggle("active");
 
 }
 
+
 }
 
 
@@ -120,7 +161,10 @@ box.classList.toggle("active");
 
 
 
+
+
 // ================= AI CHAT =================
+
 
 
 function askAI(){
@@ -135,11 +179,11 @@ if(!input || !chat) return;
 
 
 
-let question = input.value.toLowerCase();
+let question = input.value;
 
 
+if(question.trim()=="") return;
 
-if(question.trim()==="") return;
 
 
 
@@ -147,7 +191,7 @@ chat.innerHTML += `
 
 <div class="message user">
 
-${input.value}
+${question}
 
 </div>
 
@@ -158,38 +202,70 @@ ${input.value}
 
 
 let reply = 
-
 "I can help you with Thakur's portfolio, skills, projects and experience.";
 
 
 
-
-
-if(question.includes("name")){
-
-reply="My name is Thakur Singh Negi.";
-
-}
+let q = question.toLowerCase();
 
 
 
-else if(question.includes("skill")){
 
-reply="Skills include HTML, CSS, JavaScript, React, Software Development, Digital Marketing and Social Media Management.";
+if(q.includes("name") || q.includes("who")){
+
+
+reply="I am Thakur Singh Negi's AI Assistant. Thakur is a Software Developer, Digital Marketer and Social Media Manager.";
 
 }
 
 
 
-else if(question.includes("divya")){
+else if(q.includes("skill") || q.includes("skills")){
 
-reply="Thakur managed Divya Negi's Instagram profile with content strategy, engagement and growth. The profile has 12.2K+ followers.";
+
+reply="Thakur's skills include HTML, CSS, JavaScript, React, GitHub, Software Development, Digital Marketing, Content Strategy and Social Media Management.";
 
 }
 
 
 
-else if(question.includes("project")){
+
+
+else if(q.includes("bca") || q.includes("education") || q.includes("study")){
+
+
+reply="Thakur is pursuing BCA from IGNOU and focusing on software development and digital skills.";
+
+}
+
+
+
+
+
+else if(q.includes("tiq") || q.includes("technocratiq") || q.includes("internship")){
+
+
+reply="Thakur completed an internship at Technocratiq Digital where he worked on digital marketing, social media and growth related tasks.";
+
+}
+
+
+
+
+
+else if(q.includes("divya") || q.includes("instagram")){
+
+
+reply="Thakur managed Divya Negi's Instagram profile focusing on content planning, engagement and audience growth. The profile has 12.2K+ followers.";
+
+}
+
+
+
+
+
+else if(q.includes("project")){
+
 
 reply="Projects include Portfolio Website, Social Media Management and Digital Solutions.";
 
@@ -197,17 +273,12 @@ reply="Projects include Portfolio Website, Social Media Management and Digital S
 
 
 
-else if(question.includes("experience")){
-
-reply="Experience includes Technocratiq Digital internship and social media management work.";
-
-}
 
 
+else if(q.includes("developer") || q.includes("coding")){
 
-else if(question.includes("contact")){
 
-reply="Email: Adityanegi601@gmail.com | Phone: 8750116752";
+reply="Thakur works with HTML, CSS, JavaScript and focuses on web development.";
 
 }
 
@@ -215,42 +286,102 @@ reply="Email: Adityanegi601@gmail.com | Phone: 8750116752";
 
 
 
+else if(q.includes("marketing") || q.includes("digital")){
 
 
-let bot = document.createElement("div");
-
-bot.className="message bot";
-
-
-chat.appendChild(bot);
-
-
-
-
-
-let i=0;
-
-
-let typingEffect=setInterval(()=>{
-
-
-bot.innerHTML += reply[i];
-
-
-i++;
-
-
-if(i>=reply.length){
-
-clearInterval(typingEffect);
+reply="Thakur has experience in digital marketing, content strategy, social media growth and online branding.";
 
 }
+
+
+
+
+
+else if(q.includes("contact") || q.includes("email")){
+
+
+reply="Contact Thakur: Adityanegi601@gmail.com | Phone: 8750116752";
+
+}
+
+
+
+
+
+else if(q.includes("github")){
+
+
+reply="GitHub: https://github.com/ThakurNegi";
+
+}
+
+
+
+
+
+else{
+
+
+reply="You can ask me about Thakur's skills, projects, experience, education or contact details.";
+
+}
+
+
+
+
+
+
+// typing animation
+
+
+chat.innerHTML += `
+
+<div class="message bot typing-ai">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+`;
+
 
 
 chat.scrollTop = chat.scrollHeight;
 
 
-},35);
+
+
+
+
+setTimeout(()=>{
+
+
+document.querySelector(".typing-ai")?.remove();
+
+
+
+chat.innerHTML += `
+
+<div class="message bot">
+
+${reply}
+
+</div>
+
+`;
+
+
+
+chat.scrollTop = chat.scrollHeight;
+
+
+
+},1000);
+
 
 
 
@@ -258,6 +389,7 @@ chat.scrollTop = chat.scrollHeight;
 input.value="";
 
 
+
 }
 
 
@@ -266,17 +398,27 @@ input.value="";
 
 
 
-// ENTER BUTTON SEND
 
 
-document.getElementById("aiInput")
 
-?.addEventListener("keypress",(e)=>{
+// ================= ENTER SEND =================
+
+
+
+const aiInput = document.getElementById("aiInput");
+
+
+if(aiInput){
+
+
+aiInput.addEventListener("keypress",(e)=>{
 
 
 if(e.key==="Enter"){
 
+
 askAI();
+
 
 }
 
@@ -284,11 +426,17 @@ askAI();
 });
 
 
+}
 
 
 
 
-// LOADER
+
+
+
+
+
+// ================= LOADER =================
 
 
 window.addEventListener("load",()=>{
@@ -298,3 +446,19 @@ document.body.style.opacity="1";
 
 
 });
+
+function toggleMenu(){
+
+const menu = document.querySelector(".links");
+
+menu.classList.toggle("active");
+
+}
+
+function toggleMenu(){
+
+const menu = document.querySelector(".links");
+
+menu.classList.toggle("active");
+
+}
