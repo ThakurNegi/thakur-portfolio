@@ -462,3 +462,51 @@ const menu = document.querySelector(".links");
 menu.classList.toggle("active");
 
 }
+
+else if(q.includes("linkedin")){
+
+reply="LinkedIn: https://www.linkedin.com/in/thakur-singh-negi-473787250";
+
+}
+
+else if(q.includes("service") || q.includes("services")){
+
+reply="Services: Website Development, Digital Marketing and Social Media Management.";
+
+}
+
+else if(q.includes("hire")){
+
+reply="You can hire Thakur for Website Development, Portfolio Websites, Digital Marketing and Social Media Management.";
+
+}
+
+else if(q.includes("phone") || q.includes("number")){
+
+reply="Phone Number: 8750116752";
+
+}
+
+else if(q.includes("hello") || q.includes("hi") || q.includes("hey")){
+
+reply="Hello 👋 Welcome to Thakur Singh Negi's Portfolio.";
+
+}
+
+else if(q.includes("price") || q.includes("cost")){
+
+reply="Pricing depends on project requirements. Contact Thakur directly for a quotation.";
+
+}
+
+else if(q.includes("website")){
+
+reply="Thakur develops responsive websites, portfolio websites and landing pages.";
+
+}
+
+else if(q.includes("react")){
+
+reply="Thakur works with React, HTML, CSS and JavaScript.";
+
+}
