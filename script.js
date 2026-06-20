@@ -167,228 +167,138 @@ box.classList.toggle("active");
 
 
 
+// ================= AI CHAT =================
+
 function askAI(){
 
-
 const input = document.getElementById("aiInput");
-
 const chat = document.getElementById("chatBody");
-
 
 if(!input || !chat) return;
 
-
-
 let question = input.value;
-
 
 if(question.trim()=="") return;
 
-
-
-
 chat.innerHTML += `
-
 <div class="message user">
-
 ${question}
-
 </div>
-
 `;
-
-
-
-
-
-let reply = 
-"I can help you with Thakur's portfolio, skills, projects and experience.";
-
-
 
 let q = question.toLowerCase();
 
-
-
+let reply = "I can help you with Thakur's portfolio, skills, projects, services and experience.";
 
 if(q.includes("name") || q.includes("who")){
-
 
 reply="I am Thakur Singh Negi's AI Assistant. Thakur is a Software Developer, Digital Marketer and Social Media Manager.";
 
 }
 
+else if(q.includes("hi") || q.includes("hello") || q.includes("hey")){
 
-
-else if(q.includes("skill") || q.includes("skills")){
-
-
-reply="Thakur's skills include HTML, CSS, JavaScript, React, GitHub, Software Development, Digital Marketing, Content Strategy and Social Media Management.";
+reply="Hello 👋 Welcome to Thakur Singh Negi's Portfolio.";
 
 }
 
+else if(q.includes("skill")){
 
-
-
-
-else if(q.includes("bca") || q.includes("education") || q.includes("study")){
-
-
-reply="Thakur is pursuing BCA from IGNOU and focusing on software development and digital skills.";
+reply="Skills: HTML, CSS, JavaScript, React, GitHub, Software Development, Digital Marketing, Content Strategy and Social Media Management.";
 
 }
 
+else if(q.includes("education") || q.includes("bca")){
 
-
-
-
-else if(q.includes("tiq") || q.includes("technocratiq") || q.includes("internship")){
-
-
-reply="Thakur completed an internship at Technocratiq Digital where he worked on digital marketing, social media and growth related tasks.";
+reply="Thakur is pursuing BCA from IGNOU.";
 
 }
 
+else if(q.includes("experience")){
 
+reply="Thakur has internship experience at Technocratiq Digital and social media management experience.";
 
+}
 
+else if(q.includes("tiq") || q.includes("technocratiq")){
+
+reply="Thakur worked at Technocratiq Digital on digital marketing and growth related tasks.";
+
+}
 
 else if(q.includes("divya") || q.includes("instagram")){
 
-
-reply="Thakur managed Divya Negi's Instagram profile focusing on content planning, engagement and audience growth. The profile has 12.2K+ followers.";
+reply="Thakur managed Divya Negi's Instagram profile with 12.2K+ followers.";
 
 }
 
-
-
-
-
 else if(q.includes("project")){
-
 
 reply="Projects include Portfolio Website, Social Media Management and Digital Solutions.";
 
 }
 
+else if(q.includes("github")){
 
-
-
-
-else if(q.includes("developer") || q.includes("coding")){
-
-
-reply="Thakur works with HTML, CSS, JavaScript and focuses on web development.";
+reply="GitHub: github.com/ThakurNegi";
 
 }
 
+else if(q.includes("linkedin")){
 
-
-
-
-else if(q.includes("marketing") || q.includes("digital")){
-
-
-reply="Thakur has experience in digital marketing, content strategy, social media growth and online branding.";
+reply="LinkedIn: linkedin.com/in/thakur-singh-negi-473787250";
 
 }
-
-
-
-
 
 else if(q.includes("contact") || q.includes("email")){
 
-
-reply="Contact Thakur: Adityanegi601@gmail.com | Phone: 8750116752";
-
-}
-
-
-
-
-
-else if(q.includes("github")){
-
-
-reply="GitHub: https://github.com/ThakurNegi";
+reply="Email: Adityanegi601@gmail.com | Phone: 8750116752";
 
 }
 
+else if(q.includes("phone")){
 
-
-
-
-else{
-
-
-reply="You can ask me about Thakur's skills, projects, experience, education or contact details.";
+reply="Phone Number: 8750116752";
 
 }
 
+else if(q.includes("service")){
 
+reply="Services: Website Development, Digital Marketing and Social Media Management.";
 
+}
 
+else if(q.includes("hire")){
 
+reply="You can hire Thakur for websites, digital marketing and social media management.";
 
-// typing animation
-
+}
 
 chat.innerHTML += `
-
 <div class="message bot typing-ai">
-
 <span></span>
-
 <span></span>
-
 <span></span>
-
 </div>
-
 `;
 
-
-
 chat.scrollTop = chat.scrollHeight;
-
-
-
-
-
 
 setTimeout(()=>{
 
-
 document.querySelector(".typing-ai")?.remove();
 
-
-
 chat.innerHTML += `
-
 <div class="message bot">
-
 ${reply}
-
 </div>
-
 `;
-
-
 
 chat.scrollTop = chat.scrollHeight;
 
-
-
 },1000);
 
-
-
-
-
 input.value="";
-
-
 
 }
 
